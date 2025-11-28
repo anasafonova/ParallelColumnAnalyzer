@@ -111,12 +111,12 @@ docker run --rm -v column-data:/app/build alpine ls -la /app/build
 
 ### Execution Policy Support
 
-| Platform | Status | Notes |
-|----------|--------|-------|
-| **Linux** | ⚠️ Limited | Requires GCC with specially built libstdc++ + TBB |
-| **macOS** | ✅ Partial | Strategies 2 & 3 work; execution policy not tested |
-| **Windows** | ✅ Supported | MSVC 2019+ with proper STL implementation |
-| **Docker** | ⚠️ Fallback | Ubuntu image lacks execution policy support, uses threads strategy |
+| Platform | Status | Notes                                                                     |
+|----------|--------|---------------------------------------------------------------------------|
+| **Linux** | ⚠️ Limited | Requires GCC with specially built libstdc++ + TBB                         |
+| **macOS** | ✅ Partial | Strategies 2 & 3 work; execution policy requires GCC + TBB (not tested, Clang implementation incomplete) |
+| **Windows** | ✅ Supported | MSVC 2019+ with proper STL implementation                                 |
+| **Docker** | ⚠️ Fallback | Ubuntu image lacks execution policy support, uses threads strategy        |
 
 **Note:** Execution policy (strategy 1) is experimental in GCC and requires libstdc++ built with `_GLIBCXX_USE_TBB_PAR_BACKEND`. Standard Ubuntu/Debian packages do not include this. The program automatically falls back to manual threads strategy when execution policy is unavailable.
 

@@ -3,6 +3,10 @@ cmake-build-*/
 build/
 out/
 
+# Testing
+Testing/
+CTestTestfile.cmake
+
 # IDE
 .idea/
 .vscode/
