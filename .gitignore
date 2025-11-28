@@ -1,0 +1,27 @@
+# Build directories
+cmake-build-*/
+build/
+out/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Generated data
+*.csv
+data/
+test_data/
+!data/.gitkeep
+
+# Compiled binaries
+*.o
+*.exe
+*.out
+*.app
+ParallelColumnAnalyzer
+
+# macOS
+.DS_Store
