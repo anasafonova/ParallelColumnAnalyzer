@@ -114,7 +114,7 @@ docker run --rm -v column-data:/app/build alpine ls -la /app/build
 | Platform | Status | Notes |
 |----------|--------|-------|
 | **Linux** | ⚠️ Limited | Requires GCC with specially built libstdc++ + TBB |
-| **macOS** | ✅ Partial | Strategies 2 & 3 work; execution policy not tested |
+| **macOS** | ⚠️ Not tested | Requires GCC with TBB (Clang implementation incomplete) |
 | **Windows** | ✅ Supported | MSVC 2019+ with proper STL implementation |
 | **Docker** | ⚠️ Fallback | Ubuntu image lacks execution policy support, uses threads strategy |
 
