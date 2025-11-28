@@ -77,8 +77,14 @@ docker build -t parallel-analyzer .
 ## ⚡ Examples
 
 ```bash
+# Show utility info
+./ParallelColumnAnalyzer --help
+
 # Generate test data
 ./ParallelColumnAnalyzer --generate --output data.csv --rows 10000 --cols 50
+
+# Analyze with execution policy
+./ParallelColumnAnalyzer --analyze --input data.csv --strategy 1
 
 # Analyze with manual threads
 ./ParallelColumnAnalyzer --analyze --input data.csv --strategy 2 --threads 8
